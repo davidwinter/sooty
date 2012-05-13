@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["i@djw.me"]
   gem.description   = %q{Install Puppet via Rake and apply your manifests.}
   gem.summary       = gem.description
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/davidwinter/sooty"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
