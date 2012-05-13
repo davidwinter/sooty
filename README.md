@@ -1,6 +1,6 @@
 # Sooty
 
-TODO: Write a gem description
+Install Puppet via Rake and apply your manifests.
 
 ## Installation
 
@@ -18,7 +18,31 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Sooty allows you to easily setup Puppet on your server, and apply your manifests
+to it.
+
+A simple example for your `Rakefile` would be:
+
+	require "rubygems"
+	require "bundler/setup"
+
+	require 'sooty'
+
+	set :domain, 'user@server.com'
+
+	set :puppet_manifest, 'private/puppet/manifest.pp'
+	set :puppet_modules, 'private/puppet/modules'
+
+You'd then the following once to get Puppet installed:
+
+	rake sooty:setup
+
+Then whenever you make changes to your Puppet manifests, just run:
+
+	rake sooty:apply
+
+This will apply those changes on the server for you and ensure everything is
+up-to-date.
 
 ## Contributing
 
