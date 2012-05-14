@@ -6,7 +6,7 @@ Install Puppet via Rake and apply your manifests.
 
 Add this line to your application's Gemfile:
 
-    gem 'sooty'
+    gem 'sooty-puppet'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install sooty
+    $ gem install sooty-puppet
 
 ## Usage
 
