@@ -14,7 +14,7 @@ namespace :sooty do
   end
 
   def setup_puppet_repo_cmd
-    deb_file = 'puppetlabs-release_1.0-3_all.deb'
+    deb_file = 'puppetlabs-release-stable.deb'
     
     repo_cmd = [
       "wget http://apt.puppetlabs.com/#{deb_file}",
