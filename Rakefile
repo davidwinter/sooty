@@ -7,3 +7,4 @@ require_relative 'lib/sooty'
 set :domain, 'vagrant@192.168.33.10'
 
 set :puppet_manifest, 'test/manifest.pp'
+set :puppet_options, '--verbose --debug'

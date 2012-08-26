@@ -65,6 +65,7 @@ namespace :sooty do
     puppet_cmd = 'sudo puppet apply '
     puppet_cmd += '--modulepath=/tmp/puppet/modules ' if defined? puppet_modules
     puppet_cmd += 'manifest.pp'
+    puppet_cmd += " #{puppet_options}" if defined? puppet_options
 
     cmds += [puppet_cmd]
 
