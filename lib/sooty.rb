@@ -11,7 +11,7 @@ namespace :sooty do
   desc 'Archive, transfer and apply Puppet manifests to host'
   remote_task :apply do
     sh create_puppet_archive_cmd
-    rsync '/tmp/puppet.tar.gz', '/tmp'
+    rsync '/tmp/puppet.tar.gz', "#{domain}:/tmp"
     run puppet_apply_cmd
   end
 
