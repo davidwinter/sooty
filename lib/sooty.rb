@@ -2,11 +2,13 @@ require 'rake/remote_task'
 
 namespace :sooty do
   
+  desc 'Install Puppet and its dependencies'
   remote_task :setup do
     run setup_puppet_repo_cmd
     run install_puppet_cmd
   end
 
+  desc 'Archive, transfer and apply Puppet manifests to host'
   remote_task :apply do
     sh create_puppet_archive_cmd
     rsync '/tmp/puppet.tar.gz', '/tmp'
